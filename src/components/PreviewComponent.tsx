@@ -234,7 +234,7 @@ const PreviewComponent: React.FC<PreviewComponentProps> = ({
 	return (
 		<div className="flex flex-col items-center justify-center">
 			<div className="relative">
-				<div className="" ref={previewRef}></div>
+				<div ref={previewRef}></div>
 			</div>
 		</div>
 	);
