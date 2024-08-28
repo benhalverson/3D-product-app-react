@@ -11,7 +11,7 @@ const Scene: React.FC = () => {
           <div className="border-4 border-white">
             <Suspense fallback={<div>Loading...</div>}>
               <PreviewComponent
-                url="https://pub-0ec69c7d5c064de8b57f5d594f07bc02.r2.dev/blender_rims.stl"
+                url="https://pub-0ec69c7d5c064de8b57f5d594f07bc02.r2.dev/Rear_Buggy_RC_RIM_BBS.stl"
                 onExceedsLimit={() => false}
                 onError={() => (<div>
                   <p>There was an error loading the model</p>
