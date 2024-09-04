@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
@@ -42,10 +43,6 @@ const PreviewComponent: React.FC<PreviewComponentProps> = ({
 	const [modelLoaded, setModelLoaded] = useState<boolean>(false);
 	const [exceedsLimit, setExceedsLimit] = useState<boolean>(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-	console.log("errorMessage", errorMessage);
-	console.log("dimensions", dimensions);
-  console.log("exceedsLimit", exceedsLimit);
 
 	useEffect(() => {
 		if (previewRef.current) {
@@ -96,9 +93,6 @@ const PreviewComponent: React.FC<PreviewComponentProps> = ({
 	const loadModelAndCheckDimensions = async (url: string) => {
 		try {
 			const geometry = await loadModel(url);
-			const dimensions = getDimensions(geometry);
-			const modelDimensions = checkModelDimensions(geometry);
-			console.log(dimensions, modelDimensions);
 			if (geometry) {
 				const material = new THREE.MeshStandardMaterial({ color: 0xb3b3b3 });
 				meshRef.current = new THREE.Mesh(geometry, material);

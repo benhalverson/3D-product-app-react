@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from "react";
+import Example from './Product';
 
 const PreviewComponent = lazy(() => import("./PreviewComponent"));
 
@@ -18,6 +19,7 @@ const Scene: React.FC = () => {
                 </div>)}
               />
             </Suspense>
+            <Example />
           </div>
         </div>
       </div>

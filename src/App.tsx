@@ -1,12 +1,12 @@
 import "./App.css";
-import Scene from './components/Scene';
+import ProductPage from './components/Product';
 
 function App() {
 
 	return (
-		<div className="container">
-        <Scene />
-		</div>
+		<>
+				<ProductPage/>
+		</>
 	);
 }
 
